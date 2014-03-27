@@ -82,6 +82,11 @@ module CheddarGetter
     def get_customer_list(data = nil)
       do_request(:item => :customers, :action => :list, :data => data)
     end
+
+    # search customers
+    def get_customer_search(data = nil)
+      do_request(:item => :customers, :action => :list, :data => data)
+    end
     
     #https://cheddargetter.com/developers#single-customer
     #
@@ -568,6 +573,8 @@ module CheddarGetter
       :createdBeforeDate => :year_month_day,
       :canceledAfterDate => :year_month_day,
       :canceledBeforeDate => :year_month_day,
+      :transactedAfterDate => :year_month_day,
+      :transactedBeforeDate => :year_month_day,
       :firstContactDatetime => :datetime,
       :changeBillDate => :datetime
     }
