@@ -85,7 +85,7 @@ module CheddarGetter
 
     # search customers
     def get_customer_search(data = nil)
-      do_request(:item => :customers, :action => :list, :data => data)
+      do_request(:item => :customers, :action => :search, :data => data)
     end
     
     #https://cheddargetter.com/developers#single-customer
